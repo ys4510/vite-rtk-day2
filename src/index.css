@@ -21,6 +21,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(169, 169, 169, .5) 0px,
+    rgba(169, 169, 169, .5)  15px,
+    rgba(105, 105, 105, .5) 15px,
+    rgba(105, 105, 105, .5)  30px
+  );
 }
 
 h1 {
@@ -39,13 +46,14 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   margin: 8px;
+  user-select: none;
 }
 button:hover {
-  border-color: yellowgreen;
+  border-color: rgba(105, 105, 105, .9);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto yellowgreen;
+  outline: 4px auto rgba(105, 105, 105, .9);
 }
 
 #counter {
@@ -55,7 +63,8 @@ button:focus-visible {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  outline: 1px solid rgba(32, 178, 170, .2);
+  outline: 1px solid rgba(105, 105, 105, .9) ;
+  background-color: #f9f9f9;
   margin: 8px;
   text-align: center;
 }
