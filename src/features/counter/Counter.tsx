@@ -1,7 +1,7 @@
 import React from "react";
 import type { RootState } from "../../app/store";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { counterAsync, decrement, increment, incrementByAmount } from "./counterSlice";
+import { counterAsync, decrement, increment, incrementByAmount, incrementAsync } from "./counterSlice";
 
 export function Counter() {
   const count = useAppSelector((state: RootState) => state.counter.value);
@@ -35,6 +35,9 @@ export function Counter() {
         >
           IncrementAsync
         </button>
+        <button onClick={() => dispatch(incrementAsync())} >
+          IncrementAsync (wait関数使用)
+          </button>
       </div>
     </div>
   );
